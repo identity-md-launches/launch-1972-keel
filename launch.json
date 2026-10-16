@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "Keel",
+    "name": "Keel",
+    "symbol": "KEEL",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0x0000000000000000000000000000000000000000",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 8800,
+    "initialMarketCapWei": "2000000000000000000",
+    "remainderTo": "0x51a9ca901c0cb5c222d244b2ccb0ebfc5c9aba99"
+  },
+  "notes": "Keel (KEEL) is a fixed-supply ERC-20 at src/Keel.sol, Solidity identifier Keel, extending the vendored OpenZeppelin ERC20 unchanged. Its constructor takes no arguments and mints 1,000,000,000 KEEL with 18 decimals (1000000000000000000000000000 minor units) once to msg.sender, the launch factory. There is no mint function, initializer, owner, pause, blacklist, fee, burn-on-transfer, proxy or upgrade path, so the supply is fixed at construction and transfers move exactly the requested amount, which keeps the factory's distributor transfer, the pool seed through the Uniswap v4 PoolManager and ordinary swaps whole. No application contracts are deployed with this launch. The pool pairs with native ETH at the launch policy fee of 12500 (1.25%) and tick spacing 60; initialPrice is provenance only and the deployer derives the opening price from economics.initialMarketCapWei and totalSupply."
+}
